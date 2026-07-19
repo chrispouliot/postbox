@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Postcard
+Exec=postcard
+Icon=in.gxanshu.postcard
+Terminal=false
+Type=Application
+Categories=Network;Email;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

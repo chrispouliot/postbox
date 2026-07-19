@@ -1,7 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $PostboxAccountDialog: Adw.Dialog {
+template $PostcardAccountDialog: Adw.Dialog {
     title: _("Add Account");
     content-width: 480;
     content-height: 560;
@@ -57,6 +57,14 @@ template $PostboxAccountDialog: Adw.Dialog {
                           input-purpose: digits;
                           text: "993";
                         }
+
+                      Adw.ComboRow imap_security_row {
+                          title: _("Connection Security");
+                          model: Gtk.StringList {
+                              strings ["TLS", "STARTTLS"]
+                          };
+                          selected: 0;
+                      }
                     }
 
                   Adw.PreferencesGroup {
@@ -71,6 +79,14 @@ template $PostboxAccountDialog: Adw.Dialog {
                           input-purpose: digits;
                           text: "587";
                         }
+
+                      Adw.ComboRow smtp_security_row {
+                          title: _("Connection Security");
+                          model: Gtk.StringList {
+                              strings ["TLS", "STARTTLS"]
+                          };
+                          selected: 1;
+                      }
                     }
                 };
             };

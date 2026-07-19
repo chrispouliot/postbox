@@ -1,0 +1,31 @@
+#!@PYTHON@
+# postcard.in
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+import gettext
+import locale
+import os
+import signal
+import sys
+
+VERSION = "@VERSION@"
+pkgdatadir = "@pkgdatadir@"
+localedir = "@localedir@"
+
+sys.path.insert(1, pkgdatadir)
+signal.signal(signal.SIGINT, signal.SIG_DFL)
+
+locale.bindtextdomain("postcard", localedir)
+locale.textdomain("postcard")
+gettext.install("postcard", localedir)
+
+if __name__ == "__main__":
+    from gi.repository import Gio
+
+    resource = Gio.Resource.load(os.path.join(pkgdatadir, "postcard.gresource"))
+    resource._register()  # noqa: SLF001 — GResource._register is the public entry point
+
+    from postcard import main
+
+    sys.exit(main.main(VERSION))

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>in.gxanshu.postcard</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>Postcard</name>
+  <summary>A modern email client for GNOME</summary>
+  <description>
+    <p>
+      Postcard is a fast, modern email client for the GNOME desktop, built with GTK 4 and
+      libadwaita. It follows the same three-pane layout as Geary — folders, conversations,
+      and reading pane — with a clean, native feel and nothing to configure to get started
+      beyond your account details.
+    </p>
+    <p>Features include:</p>
+    <ul>
+      <li>Multiple IMAP/SMTP accounts</li>
+      <li>Conversations grouped into threads</li>
+      <li>Instant full-text search across your mail</li>
+      <li>Offline reading from a local cache</li>
+      <li>HTML and plain-text mail, with remote images blocked until you allow them</li>
+      <li>Compose, reply, and forward, with Cc/Bcc, a signature, and a Drafts/Outbox that
+      never loses a message</li>
+      <li>Archive, trash, move, and undo, with desktop notifications for new mail</li>
+    </ul>
+  </description>
+
+  <developer id="in.gxanshu">
+    <name>Anshu</name>
+  </developer>
+
+  <url type="homepage">https://github.com/gxanshu/postcard</url>
+  <url type="vcs-browser">https://github.com/gxanshu/postcard</url>
+  <url type="bugtracker">https://github.com/gxanshu/postcard/issues</url>
+
+  <translation type="gettext">postcard</translation>
+  <launchable type="desktop-id">in.gxanshu.postcard.desktop</launchable>
+  <content_rating type="oars-1.1" />
+
+  <branding>
+    <color type="primary" scheme_preference="light">#488ed2</color>
+    <color type="primary" scheme_preference="dark">#306bb4</color>
+  </branding>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>The three-pane layout with folders, conversations, and reader</caption>
+      <image>https://raw.githubusercontent.com/gxanshu/postcard/main/data/screenshots/main-window.png</image>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="1.0.0" date="2026-07-19">
+      <description translate="no">
+        <p>First release.</p>
+        <ul>
+          <li>Multiple IMAP/SMTP accounts with passwords stored in the system keyring</li>
+          <li>Three-pane layout with conversation threading and full-text search</li>
+          <li>Read HTML and plain-text mail, with remote-image blocking and attachments</li>
+          <li>Compose, reply, and forward, with Cc/Bcc, a signature, and a Drafts/Outbox
+          queue</li>
+          <li>Archive, trash, move, and mark read/starred, with undo and desktop
+          notifications</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+
+</component>
