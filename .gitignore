@@ -13,3 +13,6 @@ CLAUDE.md
 AGENTS.md
 .claude
 .agents
+
+# Nix build
+.direnv/
